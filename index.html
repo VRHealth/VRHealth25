@@ -3,31 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VR Health</title>
-  <link rel="stylesheet" href="style.css">
+  <title>VRHealth Team</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+  </style>
 </head>
-<body>
-<header>
-  <h1>VR Health 2025</h1>
+<body class="bg-gray-100 text-gray-900">
+<!-- Header -->
+<header class="text-center p-8 bg-blue-600 text-white">
+  <h1 class="text-4xl font-bold">VRHealth 2025</h1>
+  <p class="text-lg mt-2">Innovating the Future of Health Tech</p>
 </header>
 
-<section id="about">
-  <h2>About the Project</h2>
-  <p>Our goal is to develop an environment with activities intended to aid those with Alzheimer's Disease or dementia </p>
+<!-- Project Goal -->
+<section id="project-goal" class="max-w-3xl mx-auto my-12 p-6 bg-white shadow-lg rounded-lg opacity-0">
+  <h2 class="text-2xl font-bold mb-4">Project Goal</h2>
+  <p>Our goal is to develop an environment with activities intended to aid those with Alzheimer's Disease or dementia.</p>
 </section>
 
-<section id="team">
-  <h2>Meet the Team</h2>
-  <ul>
-    <li>Kurt Kimura</li>
-    <li>James Ligeralde</li>
-    <li>Kye Steele</li>
-  </ul>
+<!-- Team Members -->
+<section id="team-section" class="max-w-3xl mx-auto my-12 p-6 bg-white shadow-lg rounded-lg opacity-0">
+  <h2 class="text-2xl font-bold mb-6 text-center">Meet Our Team</h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+
+    <div class="p-4 border rounded-lg bg-gray-50">
+      <img src="assets/images/james.jpg" alt="James Ligeralde" class="w-24 h-24 mx-auto rounded-full object-cover">
+      <h3 class="font-bold mt-3">James Ligeralde</h3>
+      <p class="text-gray-600">Tech Lead</p>
+    </div>
+
+    <div class="p-4 border rounded-lg bg-gray-50">
+      <img src="https://via.placeholder.com/100" alt="Kurt Kimura" class="w-24 h-24 mx-auto rounded-full object-cover">
+      <h3 class="font-bold mt-3">Kurt Kimura</h3>
+      <p class="text-gray-600">Requirements Lead</p>
+    </div>
+
+    <div class="p-4 border rounded-lg bg-gray-50">
+      <img src="https://via.placeholder.com/100" alt="Kye Steele" class="w-24 h-24 mx-auto rounded-full object-cover">
+      <h3 class="font-bold mt-3">Kye Steele</h3>
+      <p class="text-gray-600">Communications Lead</p>
+    </div>
+
+  </div>
 </section>
 
-<section id="contact">
-  <h2>Contact Us</h2>
-  <p>Email: team@gmail.com</p>
+
+<!-- Contact Us -->
+<section id="contact-section" class="max-w-3xl mx-auto my-12 p-6 bg-white shadow-lg rounded-lg opacity-0">
+  <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
+  <form action="https://formspree.io/f/your-form-id" method="POST">
+    <input type="email" name="email" placeholder="Your Email" class="w-full p-2 border rounded-lg mb-2" required>
+    <textarea name="message" placeholder="Your Message" class="w-full p-2 border rounded-lg mb-2" required></textarea>
+    <button type="submit" class="w-full bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700">Send</button>
+  </form>
 </section>
+
+<!-- Footer -->
+<footer class="text-center p-4 bg-gray-800 text-white">
+  <p>&copy; 2025 VRHealth Team | All Rights Reserved</p>
+</footer>
+
+<!-- GSAP Animations -->
+<script>
+  gsap.to("#project-goal", { opacity: 1, y: -10, duration: 1, delay: 0.5 });
+  gsap.to("#team-section", { opacity: 1, y: -10, duration: 1, delay: 1 });
+  gsap.to("#contact-section", { opacity: 1, y: -10, duration: 1, delay: 1.5 });
+</script>
 </body>
 </html>
