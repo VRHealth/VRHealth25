@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VRHealth Documentation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-900 flex flex-col min-h-screen">
+<nav class="bg-gray-800 text-white p-4 sticky top-0 w-full shadow-lg z-50">
+  <ul class="flex justify-start space-x-4">
+    <li><a href="index.html" class="hover:underline">Home</a></li>
+    <li><a href="docs.html" class="hover:underline">Documentation</a></li>
+    <li><a href="builds.html" class="hover:underline">Builds</a></li>
+  </ul>
+</nav>
+
+<header class="text-center p-8 bg-blue-600 text-white">
+  <h1 class="text-4xl font-bold">VRHealth Documentation</h1>
+  <p class="text-lg mt-2">Guides and references</p>
+</header>
+
+<section id="docs-section" class="max-w-3xl mx-auto my-12 p-6 bg-white shadow-lg rounded-lg opacity-0">
+  <h2 class="text-2xl font-bold mb-4">Getting Started</h2>
+  <p>Learn how to set up and use VRHealth, including installation, configuration, and usage instructions.</p>
+</section>
+
+<footer class="text-center p-4 bg-gray-800 text-white mt-auto">
+  <p>&copy; 2025 VRHealth Team | All Rights Reserved</p>
+</footer>
+
+<script>
+  gsap.to("#docs-section", { opacity: 1, y: -10, duration: 1, delay: 0.5 });
+</script>
+</body>
+</html>
