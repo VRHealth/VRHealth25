@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VRHealth Project Requirements</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-900 flex flex-col min-h-screen">
+<nav class="bg-gray-800 text-white p-4 sticky top-0 w-full shadow-lg z-50">
+  <ul class="flex justify-start space-x-4">
+    <li><a href="index.html" class="hover:underline">Home</a></li>
+    <li><a href="docs.html" class="hover:underline">Documentation</a></li>
+    <li><a href="builds.html" class="hover:underline">Builds</a></li>
+    <li><a href="requirements.html" class="hover:underline">Requirements</a></li>
+  </ul>
+</nav>
+
+<header class="text-center p-8 bg-blue-600 text-white">
+  <h1 class="text-4xl font-bold">VRHealth Project Requirements</h1>
+  <p class="text-lg mt-2">Project Specifications</p>
+</header>
+
+<section id="docs-section" class="max-w-3xl mx-auto my-12 p-6 bg-white shadow-lg rounded-lg opacity-0">
+  <h2 class="text-2xl font-bold mb-4">Main Goal</h2>
+  <p>Our goal is to continue work on the Virtual Reality (VR) Mental Health Platform by expanding its functions to providing activities within the developed environment to aid those suffering from Alheimer's Disease or dementia. The goal of these activities are related to retaining skills relating to visual perception and spatial awareness, thus these activities will focus on object localization. One of our primary goals will be to design object localization activities within the VR environment. A subgoal of this project to make the experience enjoyable for the user, with gamification of the activities being one method of execution. The expected tech stack will be Unity for development of the activities with the environment.</p>
+  <br>
+  <p>An example implementation would be a scavenger hunt, where a list of items is provided to the user. where the user is told to locate one item within an environment. Once they locate the item, they are told to locate a different item. After that, the user will be told to recall the location of an item they had previously found. This would repeat until either time runs out, or a round limit is reached. These items are visually distinct from one another and composed of everyday common objects. Visual and audio cues may be used to help the user find objects easier such as arrows, high contrast colors highlighting the object, or even music or sounds that increase in sound with increasing proximity to the target object.</p>
+  <br>
+  <h3 class="text-2xl mb-4">Specific Goals</h3>
+  <dl>
+    <dt class="font-bold">Two versions of an Object Localization Activity</dt>
+    <dl>
+        <dt>Version 1</dt>
+        <dd>- Objects spawn anywhere randomly in a virtual environment</dd>
+        <dd>- User has to point out where each object was located</dd>
+        <dt>Version 2</dt>
+        <dd>- Objects at specific defined points, chosen at random in a virtual environment</dd>
+        <dd>- User must walk back to each object's location</dd>
+    </dl>
+    <dt class="font-bold">2 virtual environments to perform the activity in</dt>
+    <dd>- A garden/park</dd>
+    <dd>- An apartment</dd>
+    <dt class="font-bold">5 unique items to locate per environment</dt>
+    <dd>- Each environment has its own set of items</dd>
+  </dl>
+  <br>
+  <h3 class="text-2xl mb-4">Object Localization Activity</h3>
+  <p class="font-bold">Version 1</p>
+  <ol>
+    <li>1) Walk to the location of four objects</li>
+    <li>2) Walk to each location two more times</li>
+    <li>3) Using the Right Controller, point to the location of each object</li>
+  </ol>
+  <p class="font-bold">Version 2</p>  
+  <ol>
+    <li>1) Walk to the location of one object</li>
+    <li>2) Either walk to the location of a different object OR Recall the location of a previous object</li>
+    <li>3) Repeat so many times until the activity is complete</li>
+  </ol>
+</section>
+
+<footer class="text-center p-4 bg-gray-800 text-white mt-auto">
+  <p>&copy; 2025 VRHealth Team | All Rights Reserved</p>
+</footer>
+
+<script>
+  gsap.to("#docs-section", { opacity: 1, y: -10, duration: 1, delay: 0.5 });
+</script>
+</body>
+</html>
